@@ -1,0 +1,32 @@
+name: Publish release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version (e.g. 7.1.0)
+        required: true
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: incoming, path: incoming }
+      - name: Reassemble files
+        run: |
+          mkdir out
+          cd incoming/files
+          for f in *.part-aa; do [ -e "$f" ] || continue; base="${f%.part-aa}"; cat "$base".part-* > "../../out/$base"; done
+          for f in *; do case "$f" in *.part-*) ;; *) cp "$f" ../../out/ ;; esac; done
+          ls -la ../../out
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          target_commitish: main
+          name: Fish Khata ${{ inputs.version }}
+          body_path: incoming/notes.md
+          make_latest: 'true'
+          files: out/*
+      - name: Remove upload branch
+        run: git -C incoming push origin --delete incoming
