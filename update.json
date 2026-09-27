@@ -1,9 +1,9 @@
 {
-  "version": "7.2.1",
-  "message": "Mac/Windows par Google Sync login theek kiya. Party bill me har kharcha (Cooli, Kiraya, Box, Commission) sirf rakam ke saath.",
+  "version": "7.3.0",
+  "message": "Bill me advance ab bilkul alag khaane me. Bill Hindi me, aakhri line saaf: aapko milenge / aapko dene hain. Poori app Hindi me, bade akshar ka option, mobile par sab theek.",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.1/Fish-Khata-7.2.1-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.1/Fish-Khata-7.2.1-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.3.0/Fish-Khata-7.3.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.3.0/Fish-Khata-7.3.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": ""
 }
