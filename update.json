@@ -1,9 +1,9 @@
 {
-  "version": "7.1.0",
-  "message": "Activation key, update notification aur naya party invoice design.",
+  "version": "7.2.0",
+  "message": "Naya: ☁️ Google Sync — laptop, mobile, sab devices par ek hi hisaab. More → Google Sync.",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.1.0/Fish-Khata-7.1.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.1.0/Fish-Khata-7.1.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.0/Fish-Khata-7.2.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.0/Fish-Khata-7.2.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": ""
 }
