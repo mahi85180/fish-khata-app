@@ -1,9 +1,9 @@
 {
-  "version": "8.0.0",
-  "message": "7 din free trial + monthly/yearly/lifetime key · 🎤 bolkar bill · 📊 roz ka WhatsApp report · 10 bhasha (Telugu, Tamil, Kannada, Malayalam, Bengali, Odia, Marathi, Gujarati) · 🖨️ Bluetooth printer · 📋 aaj ka rate + party ka pichla rate · 👷 munim mode · 📲 app share",
+  "version": "8.1.0",
+  "message": "Party invoice ka naya saaf design: left me kharcha + advance, right me poora hisaab (fish total → pichla baaki → commission → kharcha → advance cut → payment → final), 50 item tak ek hi page me, thank-you note",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.0.0/Fish-Khata-8.0.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.0.0/Fish-Khata-8.0.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.1.0/Fish-Khata-8.1.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.1.0/Fish-Khata-8.1.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": ""
 }
