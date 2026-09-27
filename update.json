@@ -1,9 +1,9 @@
 {
-  "version": "8.1.0",
-  "message": "Party invoice ka naya saaf design: left me kharcha + advance, right me poora hisaab (fish total → pichla baaki → commission → kharcha → advance cut → payment → final), 50 item tak ek hi page me, thank-you note",
+  "version": "8.2.0",
+  "message": "Google se login karte hi har device apne-aap activate (ek key sab devices) · 12 naye bill design + poora customise (rang, font, size, border, table, kya dikhana hai, apne shabd) · kul wazan ab wazan wale column ke neeche",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.1.0/Fish-Khata-8.1.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.1.0/Fish-Khata-8.1.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.2.0/Fish-Khata-8.2.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.2.0/Fish-Khata-8.2.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": ""
 }
