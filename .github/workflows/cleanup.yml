@@ -1,0 +1,16 @@
+name: Delete old releases
+on:
+  workflow_dispatch:
+    inputs:
+      keep: { description: "tag to keep", required: true }
+permissions:
+  contents: write
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - env: { GH_TOKEN: "${{ github.token }}", KEEP: "${{ inputs.keep }}" }
+        run: |
+          gh release list -R "$GITHUB_REPOSITORY" --limit 200 --json tagName -q ".[].tagName" | while read t; do
+            if [ "$t" != "$KEEP" ]; then echo "delete $t"; gh release delete "$t" -R "$GITHUB_REPOSITORY" --yes --cleanup-tag; fi
+          done
