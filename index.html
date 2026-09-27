@@ -53,7 +53,7 @@ footer{text-align:center;color:var(--soft);font-size:13px;padding:24px 16px 40px
   document.getElementById('tip').textContent=tips[k==='mac'?'mac':k]||'';
   document.querySelectorAll('#dl a').forEach(function(a){if(a.getAttribute('data-k')===mine)a.classList.add('mine');});
   fetch('update.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(u){
-    document.querySelectorAll('#dl a').forEach(function(a){var url=u[a.getAttribute('data-k')];if(url){a.href=url;a.setAttribute('download','');}else a.href=u.page||'#';});
+    var onPages=location.protocol==='https:'&&!/github\.io$/.test(location.hostname);document.querySelectorAll('#dl a').forEach(function(a){var k=a.getAttribute('data-k'),url=onPages?'dl/'+k:u[k];if(url){a.href=url;a.setAttribute('download','');}else a.href=u.page||'#';});
   }).catch(function(){});
 })();
 </script></body></html>
