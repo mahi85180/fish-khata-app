@@ -8,5 +8,6 @@
   "notice": "",
   "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-portable.exe",
   "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-mac-x64.dmg"
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-mac-x64.dmg",
+  "payApi": "https://fishkhata.m-singh737475.workers.dev"
 }
