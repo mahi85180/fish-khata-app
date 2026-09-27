@@ -1,9 +1,12 @@
 {
-  "version": "8.3.0",
-  "message": "Online payment se turant activation (UPI/card) — bina WhatsApp ke key apne-aap lag jayegi. Pehle payment kiya tha? Key wapas laayein.",
+  "version": "8.4.0",
+  "message": "App ke andar se seedha update (browser nahi) · Seller admin panel se plan, trial aur block control · Sabke app me sandesh",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.3.0/Fish-Khata-8.3.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.3.0/Fish-Khata-8.3.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "notice": ""
+  "notice": "",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.4.0/Fish-Khata-8.4.0-mac-x64.dmg"
 }
