@@ -1,9 +1,9 @@
 {
-  "version": "7.2.0",
-  "message": "Naya: ☁️ Google Sync — laptop, mobile, sab devices par ek hi hisaab. More → Google Sync.",
+  "version": "7.2.1",
+  "message": "Mac/Windows par Google Sync login theek kiya. Party bill me har kharcha (Cooli, Kiraya, Box, Commission) sirf rakam ke saath.",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.0/Fish-Khata-7.2.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.0/Fish-Khata-7.2.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.1/Fish-Khata-7.2.1-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v7.2.1/Fish-Khata-7.2.1-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": ""
 }
