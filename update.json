@@ -1,14 +1,14 @@
 {
-  "version": "8.6.0",
-  "message": "AI assistant: bolo ya likho, kaam ho jayega · App ab English me shuru hota hai",
+  "version": "8.6.1",
+  "message": "Share message me chhota link",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.0/Fish-Khata-8.6.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.0/Fish-Khata-8.6.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.1/Fish-Khata-8.6.1-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.1/Fish-Khata-8.6.1-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.0/Fish-Khata-8.6.0-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.0/Fish-Khata-8.6.0-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.0/Fish-Khata-8.6.0-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.1/Fish-Khata-8.6.1-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.1/Fish-Khata-8.6.1-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.1/Fish-Khata-8.6.1-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU"
 }
