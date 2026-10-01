@@ -1,14 +1,14 @@
 {
-  "version": "8.6.3",
-  "message": "Har Google account ka alag hisaab · Invoice me saare items ek hi list me · Erase all data theek",
+  "version": "8.6.4",
+  "message": "Delete karke Bin me daalein, wahan se wapas laayein · Erase all data ab Google Drive aur sab devices se bhi mitata hai",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.4/Fish-Khata-8.6.4-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.4/Fish-Khata-8.6.4-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.4/Fish-Khata-8.6.4-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.4/Fish-Khata-8.6.4-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.4/Fish-Khata-8.6.4-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU"
 }
