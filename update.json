@@ -1,14 +1,14 @@
 {
-  "version": "8.7.0",
-  "message": "Worker Journal: worker apne phone se bikri/kharcha daale · Shop info ab reset nahi hota · Hisaab audit fixes",
+  "version": "8.8.0",
+  "message": "Worker ko har permission alag se · Worker cash in hand · Kharcha ka naam likh/bol ke",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.7.0/Fish-Khata-8.7.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.7.0/Fish-Khata-8.7.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.8.0/Fish-Khata-8.8.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.8.0/Fish-Khata-8.8.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.7.0/Fish-Khata-8.7.0-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.7.0/Fish-Khata-8.7.0-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.7.0/Fish-Khata-8.7.0-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.8.0/Fish-Khata-8.8.0-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.8.0/Fish-Khata-8.8.0-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.8.0/Fish-Khata-8.8.0-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU"
 }
