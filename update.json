@@ -1,14 +1,14 @@
 {
-  "version": "8.6.2",
-  "message": "Smoother and more stable: no lag while typing or changing bill design, auto-recovery if a screen crashes, error reports to admin",
+  "version": "8.6.3",
+  "message": "Har Google account ka alag hisaab · Invoice me saare items ek hi list me · Erase all data theek",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.2/Fish-Khata-8.6.2-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.2/Fish-Khata-8.6.2-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.2/Fish-Khata-8.6.2-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.2/Fish-Khata-8.6.2-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.2/Fish-Khata-8.6.2-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.6.3/Fish-Khata-8.6.3-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU"
 }
