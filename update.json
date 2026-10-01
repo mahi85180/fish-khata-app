@@ -1,14 +1,14 @@
 {
-  "version": "8.9.0",
-  "message": "Worker report: har worker ka pura hisaab alag · Sync aur smooth · Hisaab audit fixes",
+  "version": "8.10.0",
+  "message": "Saaf aur aasaan design · Tez sync · Halka app",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.9.0/Fish-Khata-8.9.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.9.0/Fish-Khata-8.9.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.10.0/Fish-Khata-8.10.0-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.10.0/Fish-Khata-8.10.0-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.9.0/Fish-Khata-8.9.0-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.9.0/Fish-Khata-8.9.0-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.9.0/Fish-Khata-8.9.0-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.10.0/Fish-Khata-8.10.0-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.10.0/Fish-Khata-8.10.0-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.10.0/Fish-Khata-8.10.0-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU"
 }
