@@ -1,8 +1,8 @@
 // fishkhata.pages.dev/dl/android  -> the latest app file, served from this site (customer never sees GitHub)
-const TYPES = { apk: 'application/vnd.android.package-archive', exe: 'application/vnd.microsoft.portable-executable', dmg: 'application/x-apple-diskimage' };
+const TYPES = { apk: 'application/vnd.android.package-archive', exe: 'application/vnd.microsoft.portable-executable', dmg: 'application/x-apple-diskimage', AppImage: 'application/vnd.appimage', deb: 'application/vnd.debian.binary-package' };
 export async function onRequest({ params }){
   const u = await (await fetch('https://raw.githubusercontent.com/mahi85180/fish-khata-app/main/update.json', { cf: { cacheTtl: 120 } })).json();
-  const map = { android: u.android, windows: u.windows, portable: u.windowsPortable, macArm: u.macArm, macX64: u.macX64 };
+  const map = { android: u.android, windows: u.windows, portable: u.windowsPortable, macArm: u.macArm, macX64: u.macX64, linux: u.linux, linuxDeb: u.linuxDeb };
   const url = map[params.kind];
   if (!url) return new Response('Not found', { status: 404 });
   const r = await fetch(url, { redirect: 'follow' });
