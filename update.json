@@ -1,16 +1,16 @@
 {
-  "version": "8.18.0",
-  "message": "वर्कर के लिए ग्राहक लिस्ट: नया ग्राहक जोड़ना / बदलना (डिलीट नहीं) · हिस्ट्री सिर्फ मालिक की अनुमति से",
+  "version": "8.18.1",
+  "message": "बिल पर पार्टी का नाम बड़ा, मोटा और चमकीले रंग में — एक नज़र में पता चले बिल किसका है",
   "page": "https://github.com/mahi85180/fish-khata-app/releases/latest",
-  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-android.apk",
-  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-win-x64.exe",
+  "android": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-android.apk",
+  "windows": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-win-x64.exe",
   "mac": "https://github.com/mahi85180/fish-khata-app/releases/latest",
   "notice": "",
-  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-portable.exe",
-  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-mac-arm64.dmg",
-  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-mac-x64.dmg",
+  "windowsPortable": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-portable.exe",
+  "macArm": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-mac-arm64.dmg",
+  "macX64": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-mac-x64.dmg",
   "payApi": "https://fishkhata.m-singh737475.workers.dev",
   "share": "https://bit.ly/46IRoFU",
-  "linux": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-linux-x86_64.AppImage",
-  "linuxDeb": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.0/Fish-Khata-8.18.0-linux-amd64.deb"
+  "linux": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-linux-x86_64.AppImage",
+  "linuxDeb": "https://github.com/mahi85180/fish-khata-app/releases/download/v8.18.1/Fish-Khata-8.18.1-linux-amd64.deb"
 }
