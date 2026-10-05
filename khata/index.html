@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Hisaab · Fish Khata</title>
+<style>
+:root{--bg:#F4F1EA;--card:#fff;--ink:#1B2B2A;--soft:#5C6B69;--line:#E4DED2;--pri:#0E5C56;--get:#C0392B;--give:#1E8449;--pay:#1FA855}
+@media (prefers-color-scheme:dark){:root{--bg:#101716;--card:#18211F;--ink:#E8EFEE;--soft:#9AAAA7;--line:#2A3633;--pri:#4FB3A9;--get:#F06B5D;--give:#58C483}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari","Noto Sans Bengali",sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:12px 16px 40px}
+.top{background:var(--pri);color:#fff;padding:16px;border-radius:0 0 18px 18px;margin:-12px -16px 12px}
+.top h1{margin:0;font-size:20px}.top p{margin:2px 0 0;opacity:.9;font-size:13px}
+.top .row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.top a.call{color:#fff;background:rgba(255,255,255,.18);border-radius:12px;padding:8px 12px;text-decoration:none;font-weight:700;white-space:nowrap;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.who{font-size:13px;color:var(--soft)}.who b{display:block;font-size:19px;color:var(--ink)}
+.bal{text-align:center;padding:18px 12px}.bal span{display:block;font-weight:800}.bal b{font-size:32px;font-variant-numeric:tabular-nums}
+.bal.get span,.bal.get b{color:var(--get)}.bal.give span,.bal.give b{color:var(--give)}
+.btn{display:block;width:100%;text-align:center;border:none;border-radius:12px;padding:13px;font-size:16px;font-weight:800;text-decoration:none;color:#fff;background:var(--pay);margin-top:10px;cursor:pointer}
+.btn.sec{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+.upd{font-size:12.5px;color:var(--soft);text-align:center;margin:-4px 0 12px}
+.dh{font-size:12.5px;font-weight:800;color:var(--soft);margin:14px 4px 6px;letter-spacing:.03em}
+.list{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.e{padding:12px 14px;border-top:1px solid var(--line);cursor:pointer}.e:first-child{border-top:none}
+.e .r1{display:flex;justify-content:space-between;gap:10px}.e .t{font-weight:700}.e .a{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.e .r2{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--soft);margin-top:2px}
+.e .run.get{color:var(--get)}.e .run.give{color:var(--give)}
+.det{display:none;margin-top:8px;font-size:13.5px}.e.open .det{display:block}
+table{width:100%;border-collapse:collapse}th,td{padding:5px 4px;border-bottom:1px dotted var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--soft)}
+.kv{display:flex;justify-content:space-between;padding:3px 0}
+.msg{text-align:center;padding:40px 16px;color:var(--soft)}.msg b{display:block;font-size:18px;color:var(--ink);margin-bottom:6px}
+.foot{text-align:center;font-size:12px;color:var(--soft);margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="msg">⏳</div></div>
+<script>
+(function(){
+  'use strict';
+  var DEFAULT_API = 'https://fishkhata.m-singh737475.workers.dev';
+  var app = document.getElementById('app');
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function money(n){ n = Math.abs(Number(n) || 0); return '₹' + n.toLocaleString('en-IN', {maximumFractionDigits:2}); }
+  function num(n){ return (Number(n) || 0).toLocaleString('en-IN', {maximumFractionDigits:3}); }
+  function d2(x){ return (x < 10 ? '0' : '') + x; }
+  function date(iso){ var d = new Date(iso); return isNaN(d) ? '' : d2(d.getDate()) + '/' + d2(d.getMonth() + 1) + '/' + d.getFullYear(); }
+  function time(ms){ var d = new Date(ms); return date(d.toISOString()) + ' ' + d2(d.getHours()) + ':' + d2(d.getMinutes()); }
+  function msg(t1, t2){ app.innerHTML = '<div class="msg"><b>' + esc(t1) + '</b>' + esc(t2 || '') + '</div>'; }
+  window.addEventListener('hashchange', function(){ location.reload(); });
+  var parts = (location.hash || '').replace(/^#/, '').split('.');
+  if (parts.length !== 3 || !/^[A-Za-z0-9]{12,40}$/.test(parts[0]) || !/^[A-Za-z0-9]{20,80}$/.test(parts[1]) || !parts[2]){ msg('यह लिंक अधूरा है / This link is incomplete', 'दुकान से पूरा लिंक दोबारा मांगें। · Ask the shop to send the link again.'); return; }
+  var ID = parts[0], TOK = parts[1], EK = parts[2], CK = 'fk-portal-' + ID;
+  function b64(s){ var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+  async function unseal(box){
+    var raw = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('fk-wk-e2e|' + EK));
+    var key = await crypto.subtle.importKey('raw', raw, {name:'AES-GCM'}, false, ['decrypt']);
+    var pt = await crypto.subtle.decrypt({name:'AES-GCM', iv:b64(box.iv), additionalData:new TextEncoder().encode(ID + '|view')}, key, b64(box.ct));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
+  async function api(){
+    try{ var r = await fetch('../update.json?t=' + Date.now(), {cache:'no-store'}); var u = await r.json(); if (u && /^https:\/\/[a-z0-9.-]+\.workers\.dev\/?$/i.test(u.payApi || '')) return u.payApi.replace(/\/+$/, ''); }catch(e){}
+    return /^https:/.test(DEFAULT_API) ? DEFAULT_API : '';
+  }
+  function cls(b){ return b > 0.5 ? 'get' : b < -0.5 ? 'give' : ''; }
+  function render(V){
+    var W = V.W || {}, T = V.T || {}, S = V.shop || {}, bal = Number(V.bal) || 0;
+    document.documentElement.lang = V.lang === 'hl' ? 'hi-Latn' : (V.lang || 'hi');
+    document.title = (T.title || 'Hisaab') + ' · ' + (S.n || '');
+    var phone = (String(S.ph || '').match(/\+?\d[\d\s-]{8,}\d/) || [''])[0].replace(/[^\d+]/g, '');
+    var h = '<div class="top"><div class="row"><div><h1>' + esc(S.n) + '</h1>' + (S.ad ? '<p>' + esc(S.ad) + '</p>' : '') + '</div>' + (phone ? '<a class="call" href="tel:' + esc(phone) + '">📞 ' + esc(T.call || 'Call') + '</a>' : '') + '</div></div>';
+    h += '<div class="card"><div class="who">' + esc(T.title) + '<b>' + esc((V.party || {}).n) + '</b></div><div class="bal ' + cls(bal) + '"><span>' + esc(bal > 0.5 ? W.youPay : bal < -0.5 ? W.youGet : W.clear) + '</span><b>' + money(bal) + '</b></div>';
+    if (bal > 0.5 && S.upi) h += '<a class="btn" href="upi://pay?pa=' + encodeURIComponent(S.upi) + '&pn=' + encodeURIComponent(S.upiN || S.n || '') + '&am=' + Math.round(bal) + '&cu=INR&tn=' + encodeURIComponent((V.party || {}).n || '') + '">💳 ' + esc(T.payBtn) + ' · ' + money(Math.round(bal)) + '</a>';
+    h += '</div><div class="upd">' + esc(T.upd) + ': ' + (V.at ? time(V.at) : '') + '</div>';
+    var rows = V.rows || [];
+    if (!rows.length) h += '<div class="msg">' + esc(T.none) + '</div>';
+    else {
+      var day = '', open = false;
+      rows.forEach(function(r, i){
+        var dd = date(r.d);
+        if (dd !== day){ if (open) h += '</div>'; h += '<div class="dh">' + esc(r.k === 'opening' ? '' : dd) + '</div><div class="list">'; open = true; day = dd; }
+        var bill = r.k === 'sale' || r.k === 'purchase' || r.k === 'parchi';
+        var title = bill ? (W[r.k] || r.k) + ' #' + esc(r.no) : r.k === 'payment' ? (r.out ? T.youGot : T.youPaid) + (r.m ? ' · ' + (W.bank || 'UPI') : '') : r.k === 'opening' ? T.open : r.k;
+        var amt = bill ? (r.k === 'parchi' ? r.net : r.t) : r.a;
+        var det = '';
+        if (bill){
+          det = '<table><tr><th>' + esc(W.item) + '</th><th>' + esc(W.qty) + '</th><th>' + esc(W.rate) + '</th><th>' + esc(W.amt) + '</th></tr>' + (r.it || []).map(function(x){ return '<tr><td>' + esc(x[0]) + '</td><td>' + num(x[1]) + ' ' + esc(x[2]) + '</td><td>' + num(x[3]) + '</td><td>' + num(x[4]) + '</td></tr>'; }).join('') + '</table>';
+          if (r.ws && r.ws.length) det += '<div class="kv" style="margin-top:6px;"><b>🗑 ' + esc(W.waste || 'Waste') + '</b></div>' + r.ws.map(function(x){ return '<div class="kv"><span>' + esc(x[0]) + ' · ' + num(x[1]) + ' ' + esc(x[2]) + (x[3] ? ' × ' + num(x[3]) : '') + '</span><span>' + money(x[4]) + '</span></div>'; }).join('');
+          det += '<div class="kv"><span>' + esc(W.total) + '</span><b>' + money(r.t) + '</b></div>';
+          (r.ded || []).forEach(function(x){ det += '<div class="kv"><span>− ' + esc(x[0]) + '</span><span>' + money(x[1]) + '</span></div>'; });
+          if (r.cm) det += '<div class="kv"><span>− ' + esc(W.commission) + '</span><span>' + money(r.cm) + '</span></div>';
+          if (r.k === 'parchi') det += '<div class="kv"><span>' + esc(W.net) + '</span><b>' + money(r.net) + '</b></div>';
+          if (r.pd) det += '<div class="kv"><span>' + esc(r.k === 'sale' ? T.youPaid : T.youGot) + (r.m ? ' (' + esc(W.bank) + ')' : '') + '</span><span>' + money(r.pd) + '</span></div>';
+        }
+        if (r.nt) det += '<div class="kv"><span>' + esc(W.note) + ': ' + esc(r.nt) + '</span></div>';
+        h += '<div class="e" data-i="' + i + '"><div class="r1"><span class="t">' + esc(title) + '</span><span class="a">' + money(amt) + '</span></div><div class="r2"><span>' + (det ? '▾' : '') + '</span><span class="run ' + cls(r.run) + '">' + esc(r.run > 0.5 ? W.youPay : r.run < -0.5 ? W.youGet : W.clear) + ' ' + money(r.run) + '</span></div>' + (det ? '<div class="det">' + det + '</div>' : '') + '</div>';
+      });
+      if (open) h += '</div>';
+    }
+    h += '<button class="btn sec" id="rf">🔄</button><div class="foot">Fish Khata</div>';
+    app.innerHTML = h;
+    app.querySelectorAll('.e').forEach(function(el){ el.addEventListener('click', function(){ el.classList.toggle('open'); }); });
+    document.getElementById('rf').addEventListener('click', load);
+  }
+  async function load(){
+    var cached = null; try{ cached = JSON.parse(localStorage.getItem(CK) || 'null'); }catch(e){}
+    if (cached) render(cached);
+    try{
+      var base = await api(); if (!base) throw new Error('no api');
+      var r = await fetch(base + '/wk/pull', {method:'POST', cache:'no-store', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:ID, worker:TOK})});
+      var j = {}; try{ j = await r.json(); }catch(e){}
+      if (r.status === 403 || j.revoked){ try{ localStorage.removeItem(CK); }catch(e){} msg('🔒 यह लिंक बंद है / This link is turned off', 'दुकान से नया लिंक मांगें। · Ask the shop for a new link.'); return; }
+      if (!j.snap || !j.snap.e2e){ if (!cached) msg('⏳ हिसाब अभी तैयार हो रहा है / Not ready yet', 'थोड़ी देर बाद फिर खोलें। · Please open again in a little while.'); return; }
+      var V = await unseal(j.snap.e2e);
+      try{ localStorage.setItem(CK, JSON.stringify(V)); }catch(e){}
+      render(V);
+    }catch(e){ if (!cached) msg('📴 खुल नहीं पाया / Could not load', 'इंटरनेट चेक करके फिर कोशिश करें। · Check internet and try again.'); }
+  }
+  load();
+})();
+</script>
+</body>
+</html>
